@@ -17,7 +17,7 @@ export default function Header() {
   const isDark = colorMode === "dark";
   const [isNotSmallerScreen] = useMediaQuery("(min-width:600px)");
   return (
-    <>
+    
       <Stack>
         <Circle
           position="absolute"
@@ -69,6 +69,6 @@ export default function Header() {
           />
         </Flex>
       </Stack>
-    </>
+    
   );
 }

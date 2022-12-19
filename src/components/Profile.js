@@ -8,7 +8,7 @@ import {
   useColorMode,
   Icon,
 } from "@chakra-ui/react";
-import {DICodeigniter, DiAndroid, DiWebplatform, DiCodeigniter} from 'react-icons/di'
+import { DiAndroid, DiWebplatform, DiCodeigniter } from "react-icons/di";
 
 // import { DiAndroid } from 'react-icons/fa'
 
@@ -23,7 +23,7 @@ function Profile() {
       w="100%"
       maxWidth={{ base: "100vh", md: "130vh", lg: "130vh", xl: "130vh" }}
     >
-      <Box alignSelf="center" px="32" py="16">
+      <Box alignSelf="center" px="1" py="16">
         <Heading fontWeight="extrabold" color="cyan.500" size="4xl">
           i dance
         </Heading>
@@ -41,7 +41,7 @@ function Profile() {
           stuff about btown
         </Text>
         <Flex direction={isNotSmallerScreen ? "row" : "column"} mt={8}>
-          <Flex
+        <Flex
             rounded="xl"
             direction="column"
             mt={4}
@@ -49,42 +49,45 @@ function Profile() {
             h="30vh"
             w="30vh"
             justify="flex-end"
-          >
-            <Icon color="white" p="4" as={DiAndroid} w="24" h="24" />
-            <Text color="white" p="4" fontSize="xl" fontWeight="semibold">
-              kitys
-            </Text>
-          </Flex>
-          <Flex
-            rounded="xl"
-            direction="column"
-            mt={4}
-            bg="blue.400"
-            h="30vh"
-            w="30vh"
-            justify="flex-end"
-            _hover={{bg: "teal.400"}}
-          >
-            <Icon color="white" p="4" as={DiWebplatform} w="24" h="24" />
-            <Text color="white" p="4" fontSize="xl" fontWeight="semibold">
-              clothes
-            </Text>
-          </Flex>
-          <Flex
-            rounded="xl"
-            direction="column"
-            mt={4}
-            bg="blue.400"
-            h="30vh"
-            w="30vh"
-            justify="flex-end"
-            _hover={{bg: "green.400"}}
+            _hover={{ bg: "green.400" }}
           >
             <Icon color="white" p="4" as={DiCodeigniter} w="24" h="24" />
             <Text color="white" p="4" fontSize="xl" fontWeight="semibold">
               and ill shit
             </Text>
+          </Flex>          
+          <Flex
+            rounded="xl"
+            direction="column"
+            mt={4}
+            ml={isNotSmallerScreen ? 4 : 0}
+            bg="gray.100"
+            h="30vh"
+            w="30vh"
+            justify="flex-end"
+            _hover={{ bg: "teal.400" }}
+          >
+            <Icon color="black" p="4" as={DiAndroid} w="24" h="24" />
+            <Text color="black" p="4" fontSize="xl" fontWeight="semibold">
+              kittys
+            </Text>
           </Flex>
+          <Flex
+            rounded="xl"
+            direction="column"
+            mt={4}
+            ml={isNotSmallerScreen ? 4 : 0}
+            bg="gray.100"
+            h="30vh"
+            w="30vh"
+            justify="flex-end"
+            _hover={{ bg: "green.400" }}
+          >
+            <Icon color="black" p="4" as={DiWebplatform} w="24" h="24" />
+            <Text color="black" p="4" fontSize="xl" fontWeight="semibold">
+              clothes
+            </Text>
+          </Flex>         
         </Flex>
       </Box>
     </Flex>
